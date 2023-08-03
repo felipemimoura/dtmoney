@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start:dev":"node core/crud.js",
-    "dev:crud": "nodemon core/crud.js",
+    "start:crud": "npx ts-node ./core/crud.ts",
+    "dev:crud": "nodemon --ext ts,tsx --exec 'npm run start:crud'",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -28,7 +28,8 @@
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
@@ -45,7 +46,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.4",
-    "@types/node": "18.11.16",
+    "@types/node": "^20.4.6",
     "@types/react": "18.0.26",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
@@ -65,7 +66,7 @@
     "lint-staged": "^13.1.0",
     "nodemon": "^3.0.1",
     "plop": "^3.1.1",
-    "prettier": "2.8.1",
-    "typescript": "4.9.4"
+    "prettier": "2.8.1"
   }
+
 }
