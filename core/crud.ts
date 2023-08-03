@@ -1,6 +1,6 @@
 import fs from 'fs'
 const DB_FILE = './core/db'
-
+import { v4 as uuid } from 'uuid'
 interface Transaction {
   id: string
   description: string
@@ -12,7 +12,7 @@ function create(
   transaction: Omit<Transaction, 'id' | 'createdAt'>
 ): Transaction {
   const newTransaction: Transaction = {
-    id: '1',
+    id: uuid(),
     createdAt: new Date(),
     description: transaction.description,
     price: transaction.price,
